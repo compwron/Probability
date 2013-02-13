@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="693b9aff-ab08-4e18-aad8-07b9cf78498e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Coin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/CoinTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/MainTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/CoinTest.java" afterPath="$PROJECT_DIR$/test/CoinTest.java" />
     </list>
     <ignored path="Probability.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +79,7 @@
       <file leaf-file-name="CoinTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/CoinTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="14" selection-start="350" selection-end="350" vertical-scroll-proportion="0.43568465">
+            <state line="11" column="59" selection-start="276" selection-end="276" vertical-scroll-proportion="0.34232366">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -530,7 +524,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/CoinTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="350" selection-end="350" vertical-scroll-proportion="0.43568465">
+        <state line="11" column="59" selection-start="276" selection-end="276" vertical-scroll-proportion="0.34232366">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

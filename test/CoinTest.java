@@ -9,7 +9,7 @@ import static org.mockito.Mockito.when;
 public class CoinTest {
 
     @Test
-    public void coinShouldFlipRandomly() {
+    public void coinFlipShouldReturnHeadsWhenRandomReturns1() {
         Random random = mock(Random.class);
         when(random.nextInt()).thenReturn(1);
 
