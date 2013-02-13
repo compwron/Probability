@@ -1,9 +1,19 @@
-/**
- * Created with IntelliJ IDEA.
- * User: Thoughtworker
- * Date: 2/13/13
- * Time: 12:23 AM
- * To change this template use File | Settings | File Templates.
- */
+import org.junit.Test;
+
+import java.util.Random;
+
+import static junit.framework.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class CoinTest {
+
+    @Test
+    public void coinShouldFlipRandomly() {
+        Random random = mock(Random.class);
+        when(random.nextInt()).thenReturn(1);
+
+        Coin coin = new Coin(random);
+        assertEquals("Heads", coin.flip());
+    }
 }
