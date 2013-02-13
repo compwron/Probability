@@ -1,9 +1,17 @@
 import java.util.Random;
 
 public class Coin {
-    public Coin(Random random){}
+    Random random;
+
+    public Coin(Random random){
+        this.random = random;
+    }
 
     public String flip(){
-        return "Heads";
+        if (random.nextInt() % 2 == 1){
+            return "Heads";
+        } else {
+            return "Tails";
+        }
     }
 }
