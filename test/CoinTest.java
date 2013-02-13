@@ -16,4 +16,13 @@ public class CoinTest {
         Coin coin = new Coin(random);
         assertEquals("Heads", coin.flip());
     }
+
+    @Test
+    public void coinFlipShouldReturnTailsWhenRandomReturns2() {
+        Random random = mock(Random.class);
+        when(random.nextInt()).thenReturn(2);
+
+        Coin coin = new Coin(random);
+        assertEquals("Tails", coin.flip());
+    }
 }
