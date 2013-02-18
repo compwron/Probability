@@ -14,7 +14,7 @@ public class CoinTest {
         when(random.nextInt()).thenReturn(1);
 
         Coin coin = new Coin(random);
-        assertEquals("Heads", coin.flip());
+        assertEquals(Coin.COIN_RESULTS.HEADS.name(), coin.flip());
     }
 
     @Test
@@ -23,6 +23,6 @@ public class CoinTest {
         when(random.nextInt()).thenReturn(2);
 
         Coin coin = new Coin(random);
-        assertEquals("Tails", coin.flip());
+        assertEquals(Coin.COIN_RESULTS.TAILS.name(), coin.flip());
     }
 }

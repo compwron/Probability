@@ -14,4 +14,8 @@ public class Coin {
             return "Tails";
         }
     }
+
+    public enum COIN_RESULTS{
+        HEADS, TAILS;
+    }
 }

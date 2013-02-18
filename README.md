@@ -1,4 +1,4 @@
-Probability
+OutcomeAnalyzer
 ===========
 Implement these user stories using TDD as though you mean it:
 
