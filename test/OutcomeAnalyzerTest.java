@@ -11,37 +11,49 @@ public class OutcomeAnalyzerTest {
 
     @Test
     public void knowsWhetherOneDieRollResultsInSixAndOneCoinFlipIsHeads(){
-        Random random = mock(Random.class);
-        when(random.nextInt()).thenReturn(6);
+        Random coinRandom = mock(Random.class);
+        when(coinRandom.nextInt()).thenReturn(2);
 
-        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(Coin.CoinResults.HEADS, 6);
+        Random dieRandom = mock(Random.class);
+        when(dieRandom.nextInt()).thenReturn(6);
+
+        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(new Coin(coinRandom), new Die(dieRandom));
         assertTrue(outcomeAnalyzer.oneDieRollResultsInSixAndOneCoinFlipIsHeads());
     }
 
     @Test
     public void knowsWhetherOneDieRollResultsInSixAndOneCoinFlipIsNotHeads(){
-        Random random = mock(Random.class);
-        when(random.nextInt()).thenReturn(1);
+        Random coinRandom = mock(Random.class);
+        when(coinRandom.nextInt()).thenReturn(1);
 
-        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(Coin.CoinResults.TAILS, 6);
+        Random dieRandom = mock(Random.class);
+        when(dieRandom.nextInt()).thenReturn(6);
+
+        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(new Coin(coinRandom), new Die(dieRandom));
         assertFalse(outcomeAnalyzer.oneDieRollResultsInSixAndOneCoinFlipIsHeads());
     }
 
     @Test
     public void knowsWhetherRollIsSixOrFlipIsHeads(){
-        Random random = mock(Random.class);
-        when(random.nextInt()).thenReturn(6);
+        Random coinRandom = mock(Random.class);
+        when(coinRandom.nextInt()).thenReturn(2);
 
-        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(Coin.CoinResults.TAILS, 6);
+        Random dieRandom = mock(Random.class);
+        when(dieRandom.nextInt()).thenReturn(5);
+
+        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(new Coin(coinRandom), new Die(dieRandom));
         assertTrue(outcomeAnalyzer.oneDieRollResultsInSixOrOneCoinFlipIsHeads());
     }
 
     @Test
     public void knowsWhetherNeitherRollIsSixNorFlipIsHeads(){
-        Random random = mock(Random.class);
-        when(random.nextInt()).thenReturn(6);
+        Random coinRandom = mock(Random.class);
+        when(coinRandom.nextInt()).thenReturn(1);
 
-        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(Coin.CoinResults.TAILS, 5);
+        Random dieRandom = mock(Random.class);
+        when(dieRandom.nextInt()).thenReturn(5);
+
+        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(new Coin(coinRandom), new Die(dieRandom));
         assertFalse(outcomeAnalyzer.oneDieRollResultsInSixOrOneCoinFlipIsHeads());
     }
 }

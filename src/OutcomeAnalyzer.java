@@ -1,19 +1,19 @@
 import java.util.Random;
 
 public class OutcomeAnalyzer {
-    Coin.CoinResults flip;
-    Integer roll;
+    Coin coin;
+    Die die;
 
-    public OutcomeAnalyzer(Coin.CoinResults flip, int roll) {
-        this.flip = flip;
-        this.roll = roll;
+    public OutcomeAnalyzer(Coin coin, Die die) {
+        this.coin = coin;
+        this.die = die;
     }
 
     public boolean oneDieRollResultsInSixAndOneCoinFlipIsHeads() {
-        return flip == Coin.CoinResults.HEADS && roll == 6;
+        return coin.isHeads() && die.isSix();
     }
 
     public boolean oneDieRollResultsInSixOrOneCoinFlipIsHeads() {
-        return flip == Coin.CoinResults.HEADS || roll == 6;
+        return coin.isHeads() || die.isSix();
     }
 }
