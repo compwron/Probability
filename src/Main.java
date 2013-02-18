@@ -9,6 +9,6 @@ public class Main {
         System.out.println("Coin flip result is: " + coin.flip());
 
         Die die = new Die(new Random());
-        System.out.println("Die roll result is: " + die.roll());
+        System.out.println("Is die roll result six?: " + die.rollIsSix());
     }
 }

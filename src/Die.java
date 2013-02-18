@@ -14,4 +14,8 @@ public class Die {
             return rollResult % 6 ;
         }
     }
+
+    public boolean rollIsSix() {
+        return roll() == 6;
+    }
 }
