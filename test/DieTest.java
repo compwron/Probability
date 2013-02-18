@@ -1,11 +1,8 @@
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Random;
 
 import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
