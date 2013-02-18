@@ -1,10 +1,14 @@
 import javax.swing.*;
+import java.security.DigestException;
 import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
         Coin coin = new Coin(new Random());
-        System.out.println(coin.flip());
+        System.out.println("Coin flip result is: " + coin.flip());
+
+        Die die = new Die(new Random());
+        System.out.println("Die roll result is: " + die.roll());
     }
 }
