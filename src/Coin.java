@@ -7,15 +7,15 @@ public class Coin {
         this.random = random;
     }
 
-    public String flip(){
+    public CoinResults flip(){
         if (random.nextInt() % 2 == 1){
-            return "Heads";
+            return CoinResults.TAILS;
         } else {
-            return "Tails";
+            return CoinResults.HEADS;
         }
     }
 
-    public enum COIN_RESULTS{
+    public enum CoinResults {
         HEADS, TAILS;
     }
 }

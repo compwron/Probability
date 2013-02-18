@@ -1,10 +1,10 @@
 import java.util.Random;
 
 public class OutcomeAnalyzer {
-    String flip;
+    Coin.CoinResults flip;
     Integer roll;
 
-    public OutcomeAnalyzer(String flip, int roll) {
+    public OutcomeAnalyzer(Coin.CoinResults flip, int roll) {
         this.flip = flip;
         this.roll = roll;
     }
