@@ -4,12 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         Coin coin = new Coin(new Random());
-//        Coin.CoinResults coinFlip = coin.flip();
-//        System.out.println("Coin flip result is: " + coinFlip);
+        System.out.println("Is coin flip result heads? " + coin.isHeads());
 
         Die die = new Die(new Random());
-//        Integer dieRoll = die.roll();
-//        System.out.println("Die roll result is: " + dieRoll);
+        System.out.println("Is die roll result six? " + die.isSix());
 
         OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(coin, die);
         System.out.println("Does one die result in a '6' and a coin flip is heads? "+outcomeAnalyzer.oneDieRollResultsInSixAndOneCoinFlipIsHeads());
