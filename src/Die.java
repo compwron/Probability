@@ -11,7 +11,7 @@ public class Die {
         if(rollResult % 6 == 0){
             return 6;
         } else {
-            return rollResult % 6 ;
+            return Math.abs(rollResult % 6);
         }
     }
 

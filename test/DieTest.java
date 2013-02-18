@@ -50,4 +50,12 @@ public class DieTest {
         Die die = new Die(random);
         assertFalse(die.rollIsSix());
     }
+
+    @Test
+    public void dieNeverRollsANegativeNumber(){
+        Random random = mock(Random.class);
+        when(random.nextInt()).thenReturn(-3);
+        Die die = new Die(random);
+        assertEquals(3, die.roll());
+    }
 }
