@@ -26,4 +26,22 @@ public class OutcomeAnalyzerTest {
         OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(Coin.CoinResults.TAILS, 6);
         assertFalse(outcomeAnalyzer.oneDieRollResultsInSixAndOneCoinFlipIsHeads());
     }
+
+    @Test
+    public void knowsWhetherRollIsSixOrFlipIsHeads(){
+        Random random = mock(Random.class);
+        when(random.nextInt()).thenReturn(6);
+
+        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(Coin.CoinResults.TAILS, 6);
+        assertTrue(outcomeAnalyzer.oneDieRollResultsInSixOrOneCoinFlipIsHeads());
+    }
+
+    @Test
+    public void knowsWhetherNeitherRollIsSixNorFlipIsHeads(){
+        Random random = mock(Random.class);
+        when(random.nextInt()).thenReturn(6);
+
+        OutcomeAnalyzer outcomeAnalyzer = new OutcomeAnalyzer(Coin.CoinResults.TAILS, 5);
+        assertFalse(outcomeAnalyzer.oneDieRollResultsInSixOrOneCoinFlipIsHeads());
+    }
 }

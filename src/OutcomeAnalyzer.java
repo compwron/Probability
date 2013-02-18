@@ -10,10 +10,10 @@ public class OutcomeAnalyzer {
     }
 
     public boolean oneDieRollResultsInSixAndOneCoinFlipIsHeads() {
-        return false;
+        return flip == Coin.CoinResults.HEADS && roll == 6;
     }
 
     public boolean oneDieRollResultsInSixOrOneCoinFlipIsHeads() {
-        return false;
+        return flip == Coin.CoinResults.HEADS || roll == 6;
     }
 }
