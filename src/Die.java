@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Die {
     Random random;
+
     public Die(Random random){
         this.random = random;
     }
@@ -13,9 +14,5 @@ public class Die {
         } else {
             return Math.abs(rollResult % 6);
         }
-    }
-
-    public boolean rollIsSix() {
-        return roll() == 6;
     }
 }

@@ -36,22 +36,6 @@ public class DieTest {
     }
 
     @Test
-    public void dieKnowsIfItRolledASix(){
-        Random random = mock(Random.class);
-        when(random.nextInt()).thenReturn(6);
-        Die die = new Die(random);
-        assertTrue(die.rollIsSix());
-    }
-
-    @Test
-    public void dieKnowsIfItDidNotRollASix(){
-        Random random = mock(Random.class);
-        when(random.nextInt()).thenReturn(5);
-        Die die = new Die(random);
-        assertFalse(die.rollIsSix());
-    }
-
-    @Test
     public void dieNeverRollsANegativeNumber(){
         Random random = mock(Random.class);
         when(random.nextInt()).thenReturn(-3);
